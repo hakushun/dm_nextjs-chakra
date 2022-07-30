@@ -7,7 +7,9 @@ import {
   ModalHeader,
   ModalOverlay,
   ModalFooter,
+  Container,
 } from '@chakra-ui/react';
+import { Comments } from './Comments';
 
 type Props = {
   post: IPost;
@@ -21,8 +23,10 @@ export const PostModal = ({ post, isOpen, onClose }: Props) => {
       <ModalContent>
         <ModalHeader>{post.title}</ModalHeader>
         <ModalCloseButton />
-        {/* TODO: comment表示 */}
-        <ModalBody>{post.body}</ModalBody>
+        <ModalBody>
+          <Container>{post.body}</Container>
+          <Comments postId={post.id} />
+        </ModalBody>
         <ModalFooter>
           <Button colorScheme="green" mr={3} onClick={onClose}>
             Close
