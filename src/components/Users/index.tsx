@@ -1,6 +1,7 @@
-import { Table, Thead, Tr, Th, Tbody, Td, Link } from '@chakra-ui/react';
+import { Table, Thead, Tr, Th, Tbody } from '@chakra-ui/react';
 import { useUsers } from '../../libs/hooks/useUsers';
 import { ContentWrapper } from '../ContentWrapper';
+import { UserRow } from './UserRow';
 
 export const Users = () => {
   const { users, isLoading } = useUsers();
@@ -18,14 +19,7 @@ export const Users = () => {
         </Thead>
         <Tbody>
           {users.map((user) => (
-            <Tr key={user.id}>
-              <Td isNumeric>{user.id}</Td>
-              <Td>{user.name}</Td>
-              <Td>{user.username}</Td>
-              <Td>
-                <Link href={`mailto:${user.email}`}>{user.email}</Link>
-              </Td>
-            </Tr>
+            <UserRow key={user.id} user={user} />
           ))}
         </Tbody>
       </Table>
