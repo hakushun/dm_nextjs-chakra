@@ -15,6 +15,7 @@ export const Layout = ({ children }: Props) => {
       gridTemplateRows={"auto 1fr"}
       gridTemplateColumns={"max(200px, 15%) 1fr"}
       h="100vh"
+      overflow="hidden"
       color="blackAlpha.700"
       fontWeight="bold">
       <GridItem bg="orange.300" area={"header"} as="header">
@@ -23,7 +24,7 @@ export const Layout = ({ children }: Props) => {
       <GridItem p="4" bg="pink.300" area={"nav"} as="nav">
         <Nav />
       </GridItem>
-      <GridItem bg="green.300" area={"main"} as="main">
+      <GridItem bg="green.300" area={"main"} as="main" overflow="auto">
         {children}
       </GridItem>
     </Grid>
