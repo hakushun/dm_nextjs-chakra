@@ -17,7 +17,8 @@ export const Layout = ({ children }: Props) => {
       h="100vh"
       overflow="hidden"
       color="blackAlpha.700"
-      fontWeight="bold">
+      fontWeight="bold"
+    >
       <GridItem bg="orange.300" area={"header"} as="header">
         <Header />
       </GridItem>
