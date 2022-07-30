@@ -4,24 +4,32 @@ import NextLink from 'next/link';
 export const Nav = () => {
   return (
     <List spacing="3">
-      <ListItem>
+      <ListItem display="flex">
         <NextLink href="/" passHref>
-          <Link>Home</Link>
+          <Link flex={1} textAlign="center">
+            Home
+          </Link>
         </NextLink>
       </ListItem>
-      <ListItem>
+      <ListItem display="flex">
         <NextLink href="/posts" passHref>
-          <Link>Posts</Link>
+          <Link flex={1} textAlign="center">
+            Posts
+          </Link>
         </NextLink>
       </ListItem>
-      <ListItem>
+      <ListItem display="flex">
         <NextLink href="/todos" passHref>
-          <Link>Todos</Link>
+          <Link flex={1} textAlign="center">
+            Todos
+          </Link>
         </NextLink>
       </ListItem>
-      <ListItem>
+      <ListItem display="flex">
         <NextLink href="/users" passHref>
-          <Link>Users</Link>
+          <Link flex={1} textAlign="center">
+            Users
+          </Link>
         </NextLink>
       </ListItem>
     </List>
