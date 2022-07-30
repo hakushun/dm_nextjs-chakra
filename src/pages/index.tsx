@@ -1,9 +1,10 @@
 import type { ReactElement } from 'react';
+import { Dashboard } from '../components/Dashboard';
 import { Layout } from '../components/Layout';
 import type { NextPageWithLayout } from './_app';
 
 const Home: NextPageWithLayout = () => {
-  return <div>Main</div>;
+  return <Dashboard />;
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
