@@ -1,6 +1,6 @@
-import { Table, Thead, Tr, Th, Tbody, Td, Link } from "@chakra-ui/react";
-import { useUsers } from "../../libs/hooks/useUsers";
-import { ContentWrapper } from "../ContentWrapper";
+import { Table, Thead, Tr, Th, Tbody, Td, Link } from '@chakra-ui/react';
+import { useUsers } from '../../libs/hooks/useUsers';
+import { ContentWrapper } from '../ContentWrapper';
 
 export const Users = () => {
   const { users, isLoading } = useUsers();

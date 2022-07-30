@@ -1,6 +1,6 @@
-import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "./_app";
-import { Layout } from "../components/Layout";
+import type { ReactElement } from 'react';
+import { Layout } from '../components/Layout';
+import type { NextPageWithLayout } from './_app';
 
 const Home: NextPageWithLayout = () => {
   return <div>Main</div>;

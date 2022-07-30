@@ -1,5 +1,5 @@
-import { Link, List, ListItem } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Link, List, ListItem } from '@chakra-ui/react';
+import NextLink from 'next/link';
 
 export const Nav = () => {
   return (
