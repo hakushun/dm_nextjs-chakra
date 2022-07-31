@@ -1,10 +1,12 @@
 import { Tr, Td, Button, useDisclosure } from '@chakra-ui/react';
+import { useUser } from '../../libs/hooks/useUser';
 import { PostModal } from './PostModal';
 
 type Props = {
   post: IPost;
 };
 export const PostRow = ({ post }: Props) => {
+  const { user } = useUser(post.userId);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -16,7 +18,7 @@ export const PostRow = ({ post }: Props) => {
         </Button>
         <PostModal post={post} isOpen={isOpen} onClose={onClose} />
       </Td>
-      <Td>{post.userId}</Td>
+      <Td>{user?.name}</Td>
     </Tr>
   );
 };

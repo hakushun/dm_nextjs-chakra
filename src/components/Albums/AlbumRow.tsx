@@ -1,10 +1,12 @@
 import { Tr, Td, Button, useDisclosure } from '@chakra-ui/react';
+import { useUser } from '../../libs/hooks/useUser';
 import { AlbumModal } from './AlbumModal';
 
 type Props = {
   album: IAlbum;
 };
 export const AlbumRow = ({ album }: Props) => {
+  const { user } = useUser(album.userId);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -16,7 +18,7 @@ export const AlbumRow = ({ album }: Props) => {
         </Button>
         <AlbumModal album={album} isOpen={isOpen} onClose={onClose} />
       </Td>
-      <Td>{album.userId}</Td>
+      <Td>{user?.name}</Td>
     </Tr>
   );
 };

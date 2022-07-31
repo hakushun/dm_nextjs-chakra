@@ -13,7 +13,7 @@ export const Posts = () => {
           <Tr>
             <Th isNumeric>ID</Th>
             <Th>Title</Th>
-            <Th isNumeric>User</Th>
+            <Th>User</Th>
           </Tr>
         </Thead>
         <Tbody>

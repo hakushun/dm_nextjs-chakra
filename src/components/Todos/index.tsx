@@ -1,6 +1,7 @@
-import { Table, Thead, Tr, Th, Tbody, Td } from '@chakra-ui/react';
+import { Table, Thead, Tr, Th, Tbody } from '@chakra-ui/react';
 import { useTodos } from '../../libs/hooks/useTodos';
 import { ContentWrapper } from '../ContentWrapper';
+import { TodoRow } from './TodoRow';
 
 export const Todos = () => {
   const { todos, isLoading } = useTodos();
@@ -13,17 +14,12 @@ export const Todos = () => {
             <Th isNumeric>ID</Th>
             <Th>Status</Th>
             <Th>Title</Th>
-            <Th isNumeric>User</Th>
+            <Th>User</Th>
           </Tr>
         </Thead>
         <Tbody>
           {todos.map((todo) => (
-            <Tr key={todo.id}>
-              <Td isNumeric>{todo.id}</Td>
-              <Td>{todo.completed ? 'DONE' : 'NEW'}</Td>
-              <Td>{todo.title}</Td>
-              <Td>{todo.userId}</Td>
-            </Tr>
+            <TodoRow key={todo.id} todo={todo} />
           ))}
         </Tbody>
       </Table>
